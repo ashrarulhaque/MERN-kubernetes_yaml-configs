@@ -53,20 +53,18 @@ This document explains the Kubernetes architecture for deploying a **MERN (Mongo
 ---
 
 ## 🎨 High-Level Architecture (Mermaid Diagram)
-
 ```mermaid
 flowchart TD
-    A[Internet] --> B[Ingress Controller (Nginx)]
+    A[Internet] --> B[Ingress Controller - Nginx]
 
-    B --> C[Frontend Service<br/>(ClusterIP / LoadBalancer)]
-    B --> D[Backend Service<br/>(ClusterIP)]
+    B --> C[Frontend Service - ClusterIP/LoadBalancer]
+    B --> D[Backend Service - ClusterIP]
 
-    C --> E[Frontend Deployment<br/>(React + Nginx Pods)]
-    D --> F[Backend Deployment<br/>(Node.js/Express Pods)]
+    C --> E[Frontend Deployment: React + Nginx Pods]
+    D --> F[Backend Deployment: Node.js/Express Pods]
 
-    F --> G[MongoDB Service<br/>(ClusterIP)]
-    G --> H[MongoDB Deployment<br/>(Pods + PVC + PV)]
-```
+    F --> G[MongoDB Service - ClusterIP]
+    G --> H[MongoDB Deployment: Pods + PVC + PV]
 
 ---
 
